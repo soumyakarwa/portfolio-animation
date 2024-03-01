@@ -27,12 +27,11 @@ var startSketch = false;
 var showText = true;
 
 window.addEventListener("message", (event) => {
-  // if (
-  //   event.origin === "http://localhost:3000"
-  // ) {
-  if (event.data === "startSketch") {
-    Runner.run(runner, engine);
-    showText = false;
+  if (event.origin === "http://localhost:3000") {
+    if (event.data === "startSketch") {
+      Runner.run(runner, engine);
+      showText = false;
+    }
   }
 });
 
