@@ -48,6 +48,7 @@ function preload() {
 }
 
 function setup() {
+  console.log("setup");
   createCanvas(windowWidth, windowHeight);
   frameRate(fps);
   textHelper();
